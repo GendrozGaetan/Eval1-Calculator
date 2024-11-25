@@ -14,7 +14,7 @@ def ask_user_input():
 
     global operator
     # Get the operator from the user
-    operator = input("Enter an operator (+, -, *, /): ")
+    operator = input("Enter an operator (+, -, *, /, p): ")
 
     global operand2
     # Get second operand from the user
@@ -34,6 +34,10 @@ def calculate(ope1, oper, ope2):
                 print("Error: Division by zero is undefined.")
                 return
             res = ope1 / ope2
+        case "p":
+            somme = ope1
+            for count in range(int(ope2)):
+                res = somme * 2
         case _:
             print("Invalid operator.")
             return
@@ -44,3 +48,7 @@ def display_result(op1, ope, ope2, res):
 
 # Call the main function to run the program
 main()
+
+
+
+
